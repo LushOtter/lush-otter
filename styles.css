@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #0d0d0d;
+    color: white;
+    overflow: hidden;
+    display: flex;
+    height: 100vh;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.container {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    grid-template-rows: auto 60px;
+    height: 100vh;
+    width: 100%;
+}
+.leftbar {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 20px;
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+.leftbar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.leftbar ul {
+    list-style: none;
+    padding: 0;
+}
+.leftbar ul li {
+    margin: 15px 0;
+}
+.leftbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px;
+    display: block;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+.leftbar ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+.maincontent {
+    padding: 50px;
+    text-align: center;
+}
+.maincontent h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.footercontent {
+    grid-column: span 2;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    padding: 15px;
+    font-size: 1rem;
+}
+#cursor-glow {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(0, 119, 255, 0.4) 0%, rgba(255, 153, 0, 0) 60%);
+    filter: blur(40px);
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out;
+}
+p {
+    max-width: 600px;
+    word-wrap: break-word;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0 auto;
+}
+.ascii-container {
+    align-items: center;
+    width: 700px;
+    height: 150px;
+    margin: 0 auto;
+}
+.ascii-water {
+    font-family: monospace;
+    white-space: pre;
+    color: #00ccff;
+}
+
+/* Popup Styling */
+.popup {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.popup.show {
+    visibility: visible;
+    opacity: 1;
+}
+.material-icons {
+    color: yellow;
+}
